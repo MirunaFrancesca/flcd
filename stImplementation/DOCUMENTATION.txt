@@ -1,0 +1,38 @@
+https://github.com/MirunaFrancesca/flcd
+-------------------------------------------------------------------------------------------------
+
+Brief explanation of the implementation logic:
+
+I had to implement 1 a.
+
+In order to implement the symbol table I created a class (SymbolTable)
+that has the following private attributes: length(a given size for the hash table)
+and the hash table itself initialised as a list of lists.
+
+Inside this class there is a function for computing the hash value of an element. 
+In another function we will parse through the elements of the list on the index equal to
+the hash value of the element given as input. The function will then return the position 
+of the element in that list. Should it not exist we will append it to the end of the list and 
+return that position. There are going to be no collision conflicts because for each possible 
+hash value we will have a list with all the elements having that hash value.
+
+In order to differentiate between id or const each element of the hash table 
+is going to be a tuple formed as it follows: (type, value).
+
+-------------------------------------------------------------------------------------------------
+Class diagram:
+
+SymbolTable:
+
+- length: int
+- symTable: matrix - list of lists
+___________________________________
+
++hashFunction(element): hash value(int)
++addToST(element): position(int)
+ 
+
+
+
+
+
