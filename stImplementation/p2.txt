@@ -1,0 +1,8 @@
+int diviser = 2, number.
+boolean isPrime = true.
+while number * number < diviser do:
+ if number mod diviser = 0 then:
+ isPrime = false.
+ exit.
+ diviser =+ 2.
+write isPrime.

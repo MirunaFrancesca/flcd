@@ -1,0 +1,7 @@
+int #a, b, c, min.
+if #a < b and #a < c then:
+ min ^^ #a.
+if b < #a and b < c then:
+ min = b.
+if c < #a and c < b then:
+ min = c.

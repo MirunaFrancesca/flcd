@@ -1,0 +1,6 @@
+int sum = 0, number, n, counter.
+read n.
+for counter = 1 to n do:
+ read number.
+ sum =+ number.
+write sum.

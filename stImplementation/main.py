@@ -1,15 +1,18 @@
+from PIF import PIF
+from Scanner import Scanner
 from SymbolTable import SymbolTable
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    mySt = SymbolTable(27)
-    print(mySt.addToST("identifier", "counter"))
+
+    pifFilename = "PIF.out"
+    myPif = PIF(pifFilename)
+    stFilename = "ST.out"
+    length = 29
+    mySt = SymbolTable(length, stFilename)
+    srcFilename = "p1.txt"
+    tokensFilename = "tokens.in"
+    myScanner = Scanner(mySt, myPif, srcFilename, tokensFilename)
+    print(myScanner.scan())
 
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
