@@ -1,0 +1,41 @@
+Class diagrams:
+
+Scanner:
+_____________________________
+-st: SymbolTable
+-pif: PIF
+-lexicalCorrectness: string
+-sourceFilename: string
+-tokensFilename: string
+-tokens: list<string>
+_____________________________
++readTokens(): list<string>
++isBoolean(token:string): boolean
++isNumber(token:string): boolean
++isChar(token:string): boolean
++isString(token:string): boolean
++isIdentifier(token:string): boolean
++identifyToken(token:string): string
++scan(): string
+
+
+SymbolTable:
+___________________________________
+-length: int
+-symTable: list<list>
+-stFilename: string
+___________________________________
++dumpDataToFile(): void
++hashFunction(element:string): int
++addToST(type:string, element:string): tuple<int,int>
+
+
+PIF:
+____________________________________________
+-pifFilename: string
+-pifList: list<tuple<string,tuple<int,int>>>
+____________________________________________
++dumpDataToFile(): void
++addToPIF(token:string, index:int): void
+
+
