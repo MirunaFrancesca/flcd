@@ -1,3 +1,5 @@
+git: https://github.com/MirunaFrancesca/flcd/tree/master/stImplementation
+
 Class diagrams:
 
 Scanner:
@@ -37,5 +39,20 @@ ____________________________________________
 ____________________________________________
 +dumpDataToFile(): void
 +addToPIF(token:string, index:int): void
+
+Regex:
+const:
+    boolean: true/false
+    number: optional +/- followed by a digit different than 0 one or multiple times,
+            followed by any digit(including 0) zero or multiple times
+    char: must begin and end with '"' or ''' and contains only one character which can be:
+          lowercase/uppercase letter, digit or is in the set S = {'~','`','!','@','#','$','%','^','&','*','"','_'}
+    string: must begin and end with '"' or ''' and contains a character one or multiple times, where character is defined as:
+            lowercase/uppercase letter, digit or is in the set S = {'~','`','!','@','#','$','%','^','&','*','"','_'}
+
+identifier:
+   must begin with '_' or lowercase/uppercase letter, followed by either:
+   '_', lowercase/uppercase letter or digit zero or multiple times
+
 
 

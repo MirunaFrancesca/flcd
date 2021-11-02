@@ -9,7 +9,7 @@ if __name__ == '__main__':
     stFilename = "ST.out"
     length = 29
     mySt = SymbolTable(length, stFilename)
-    srcFilename = "p1.txt"
+    srcFilename = "p2.txt"
     tokensFilename = "tokens.in"
     myScanner = Scanner(mySt, myPif, srcFilename, tokensFilename)
     print(myScanner.scan())

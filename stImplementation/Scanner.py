@@ -19,7 +19,7 @@ class Scanner:
         return token in ["true", "false"]
 
     def isNumber(self, token):
-        return re.match('^[-+]?[0-9]+$', token) is not None or token == "0"
+        return re.match('^[-+]?[1-9]+[0-9]*$', token) is not None or token == "0"
 
     def isChar(self, token):
         return re.match('^["\'][a-zA-Z0-9~`!@#$%^&*"_]["\']$', token)
