@@ -14,5 +14,5 @@ if __name__ == '__main__':
         line = line.split()
         result = myFaReader.belongsToFa(0, line, myFaReader.getInitialStateString())
         result = "is accepted" if result is True else "is not accepted"
-        print("The suequence " + str(line) + " " + result + " by the current FA")
+        print("The sequence " + str(line) + " " + result + " by the current FA")
 

@@ -2,10 +2,10 @@ class FiniteAutomata:
     def __init__(self, faFilename):
         self.__faFilename = faFilename
         self.__initialState = ""
+        self.__finalStates = []
         self.__states = []
         self.__alphabet = []
         self.__transitions = {}
-        self.__finalStates = []
 
 
     def readFromFile(self):

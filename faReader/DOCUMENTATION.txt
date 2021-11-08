@@ -1,0 +1,24 @@
+FiniteAutomata
+_____________________________________________________
+-faFilename: string
+-initialState: string
+-finalStates: list<string>
+-states: list<string>
+-alphabet: list<string>
+-transitions: list<string,<list<pair<string,string>>>
+_____________________________________________________
++readFromFile(): void
++getInitialStateSring(): string
++getFinalStatesString(): string
++getAllStatesString(): string
++getTransitionsString(): string
++displayFaElements: void
++getPossibleTransitions(letter: string, currentState: string): list<string>
++belongsToFa(position: int, sequence: string, currentState: string): boolean
+
+Fa file format:
+first line: initial state
+second line: all final states separated by space
+rest of the lines: on each line: fromState toState alphabetValue,
+where the transition is goinf from state 'fromState' to state 'toState' through 'alphabetValue'
+
