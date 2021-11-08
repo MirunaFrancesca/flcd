@@ -74,9 +74,10 @@ class FiniteAutomata:
 
     def getPossibleTransitions(self, letter, currentState):
         transitions = []
-        for transition in self.__transitions[currentState]:
-            if transition[1] == letter:
-                transitions.append(transition[0])
+        if currentState in self.__transitions.keys():
+            for transition in self.__transitions[currentState]:
+                if transition[1] == letter:
+                    transitions.append(transition[0])
         return transitions
 
 
