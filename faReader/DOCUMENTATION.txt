@@ -18,6 +18,21 @@ _____________________________________________________
 +getPossibleTransitions(letter: string, currentState: string): list<string>
 +belongsToFa(position: int, sequence: string, currentState: string): boolean
 
+belongsToFa logic explained:
+    Is a recursive function where position represents the index we have reached in the given sequence.
+    Current state is the state in which we are, initially the FA's initial state.
+
+    The function calls the method getPossibleTransitions which will return a list of string with all
+    the possible states in which the current state can transition to from the current state.
+
+    If the list of possible states is empty it means we have reached a dead-end and, obviously a message
+    of "not accepted by the FA" will appear in the console.
+
+    Else, we iterate through all of them and check all possible paths of traversing our FA( which
+    will be considered and treated like a graph in our case). When a valid path is found we return
+    that true, the sequence is accepted by the FA.
+
+
 Fa file format:
 digit = "0"|"1"|...|"9"
 letter = "A"|"B"|...|"Z"|"a"|"b"|...|"z"
