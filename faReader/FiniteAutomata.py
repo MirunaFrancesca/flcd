@@ -39,37 +39,35 @@ class FiniteAutomata:
 
 
     def getFinalStatesString(self):
-        fStatesString = ""
+        if len(self.__finalStates) == 1:
+            fStatesString = "Final state: "
+        else:
+            fStatesString = "Final states: "
+
         for state in self.__finalStates:
             fStatesString += state + " "
         return fStatesString
 
     def getAllStatesString(self):
-        allStatesString = ""
+        allStatesString = "All states: "
         for state in self.__states:
             allStatesString += state + " "
         return allStatesString
 
+    def getAlphabetString(self):
+        alphabetString = "Alphabet: "
+        for letter in self.__alphabet:
+            alphabetString += letter + " "
+        return alphabetString
+
 
     def getTransitionsString(self):
-        transitionsString = ""
+        transitionsString = "Transitions:\n"
         for fromState in self.__transitions.keys():
             transitionsString += "State " + fromState + ":\n"
             for toState in self.__transitions[fromState]:
                 transitionsString += "     " + fromState + " -> " + toState[0] + ": " + toState[1] + "\n"
         return transitionsString
-
-
-    def displayFaElements(self):
-        print("Fa Elements")
-        print("Initial state: " + self.getInitialStateString())
-        if len(self.__finalStates) == 1:
-            print("Final state: " + self.getFinalStatesString())
-        else:
-            print("Final states: " + self.getFinalStatesString())
-        print("All states: " + self.getAllStatesString())
-        print("Transitions:")
-        print(self.getTransitionsString())
 
 
     def getPossibleTransitions(self, letter, currentState):

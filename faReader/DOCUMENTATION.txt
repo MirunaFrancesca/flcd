@@ -1,3 +1,5 @@
+https://github.com/MirunaFrancesca/flcd/tree/master/faReader
+
 FiniteAutomata
 _____________________________________________________
 -faFilename: string
@@ -17,8 +19,16 @@ _____________________________________________________
 +belongsToFa(position: int, sequence: string, currentState: string): boolean
 
 Fa file format:
-first line: initial state
-second line: all final states separated by space
-rest of the lines: on each line: fromState toState alphabetValue,
-where the transition is goinf from state 'fromState' to state 'toState' through 'alphabetValue'
+digit = "0"|"1"|...|"9"
+letter = "A"|"B"|...|"Z"|"a"|"b"|...|"z"
+nr = ("0"|digit) {digit}
+string = (digit | letter) {digit | letter}
+value = nr | string
+state = string {" ", value}
+initial_state = state
+final_state = state
+first_line = initial_state
+second_line = final_state {" ", final_state}
+transition_lines = ( fromState, " ", toState, " ", alphabetValue, "\n" ) { fromState, " ", toState, " ", alphabetValue, "\n" }
+where the transition is going from state 'fromState' to state 'toState' through 'alphabetValue'
 
